@@ -25,7 +25,9 @@ doccy
   
   Usage Example (Controller "Report"):
   
-  <pre><code>
+First add behaviour to the controller:
+
+<pre><code>
   	public function behaviors()
 	{
 		return array(
@@ -39,7 +41,11 @@ doccy
 			),
 		);
 	}
-	
+</code></pre>
+
+Second, add an action which will be used to download parsed docx document:
+
+<pre><code>	
 	public function actionDownload()
 	{
 		$this->doccy->newFile('template.docx'); // template.docx must be located in protected/views/report/template.docx  where "report" is the name of the curren controller view folder (alternatively you must configure option "templatePath")
