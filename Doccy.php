@@ -50,7 +50,7 @@ public function actionDownload()
 	$this->doccy->phpdocx->assignNestedBlock("pets",array(array("#PETNAME#"=>"Rox")),array("members"=>2)); // would create a block pets for jane doe with the name rox
 	$this->doccy->phpdocx->assignNestedBlock("toys",array(array("#TOYNAME#"=>"Ball"),array("#TOYNAME#"=>"Frisbee"),array("#TOYNAME#"=>"Box")),array("members"=>1,"pets"=>1)); // would create a block toy for rex
 	$this->doccy->phpdocx->assignNestedBlock("toys",array(array("#TOYNAME#"=>"Frisbee")),array("members"=>2,"pets"=>1)); // would create a block toy for rox
-	$this->doccy->renderDocx("ExampleReport.docx", true); // use $forceDownload=false in order to (just) store file in the outputPath folder.
+	$this->renderDocx("ExampleReport.docx", true); // use $forceDownload=false in order to (just) store file in the outputPath folder.
 }
  *
  * @author Dino Osmanovic <dosmanovic@devlogic.eu>
